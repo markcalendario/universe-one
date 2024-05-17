@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,6 +46,13 @@
                 alt="universe" />
             </div>
             <form class="right">
+              <?php 
+                if (isset($_SESSION["registered"])) {
+                  echo "<p class='green-highlight'>You are now registered.</p>";
+                  unset($_SESSION["registered"]);
+                }
+              ?>
+              <div id="response-container"></div>
               <h1>Universe One Login</h1>
               <div class="input">
                 <label for="email">Email</label>

@@ -169,3 +169,17 @@ hr {
   border: 0;
   border-bottom: 1px var(--primary) solid;
 }
+
+/* Highlight */
+
+.green-highlight {
+  padding: 10px 15px;
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.red-highlight {
+  padding: 10px 15px;
+  background-color: var(--red);
+  color: var(--white);
+}

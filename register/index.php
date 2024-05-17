@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+if (isset($_POST["auth"])) {
+  header("Location: ../me");
+}
+
+if (isset($_SESSION["registered"])) {
+  header("Location: ../login");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,56 +55,60 @@
             <div class="left">
               <img src="../images/exploration/mysteries.png" alt="universe" />
             </div>
-            <form class="right">
+            <form id="register-form" class="right" onsubmit="return false;">
               <h1>Universe One Register</h1>
               <div class="input">
                 <label for="email">Email</label>
-                <input id="email" type="text" />
+                <input id="email" name="email" type="text" />
               </div>
               <div class="input">
                 <label for="password">Password</label>
-                <input id="password" type="password" />
+                <input id="password" name="password" type="password" />
               </div>
               <div class="input">
                 <label for="confirm-password">Confirm Password</label>
-                <input id="confirm-password" type="password" />
+                <input 
+                  id="confirm-password" 
+                  name="confirm-password" 
+                  type="password" />
               </div>
               <div class="input">
                 <label for="first-name">First Name</label>
-                <input id="first-name" type="password" />
+                <input id="first-name" name="first-name" type="text" />
               </div>
               <div class="input">
                 <label for="last-name">Last Name</label>
-                <input id="last-name" type="password" />
+                <input id="last-name" name="last-name" type="text" />
               </div>
               <div class="input">
                 <label for="birthday">Birthday</label>
-                <input id="birthday" type="date" />
+                <input id="birthday" name="birthday" type="date" />
               </div>
               <div class="input">
                 <label for="gender">Gender</label>
-                <select id="gender" type="text">
-                  <option>Select your gender.</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Others</option>
+                <select id="gender" name="gender" type="text">
+                  <option value="">Select your gender.</option>
+                  <option value="1">Male</option>
+                  <option value="2">Female</option>
+                  <option value="3">Others</option>
                 </select>
               </div>
               <div class="input">
                 <label for="contact">Contact</label>
-                <input id="contact" type="text" />
+                <input id="contact" name="contact" type="text" />
               </div>
               <div class="input">
                 <label for="country-of-residency">Country of Residency</label>
-                <select id="country-of-residency" type="text">
-                  <option>Select a country.</option>
+                <select id="country-of-residency" name="country" type="text">
+                  <option value="">Select a country.</option>
                 </select>
               </div>
               <div class="input">
                 <label for="bio">Short Bio</label>
-                <textarea></textarea>
+                <textarea id="bio" name="short-bio"></textarea>
               </div>
-              <button class="button">Register</button>
+              <div id="response-container"></div>
+              <button id="register-btn" class="button">Register</button>
               <hr />
               <a href="../login" class="button">Login</a>
             </form>
