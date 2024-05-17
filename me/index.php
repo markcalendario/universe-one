@@ -3,7 +3,7 @@
 session_start();
 
 if (!isset($_SESSION["auth"])) {
-  header("Location: ../");
+  header("Location: ../login");
 }
 
 ?>
@@ -31,7 +31,7 @@ if (!isset($_SESSION["auth"])) {
             <h1>Universe One | Home</h1>
           </div>
           <div id="nav-links" class="links">
-            <a href="../register">Log Out</a>
+            <a id="sign-out" href="#signout">Log Out</a>
           </div>
           <div class="burger">
             <i id="toggle-nav-links" class="fas fa-bars"></i>
@@ -86,3 +86,4 @@ if (!isset($_SESSION["auth"])) {
 </html>
 
 <script src="../js/navbar.js"></script>
+<script src="./index.js"></script>
