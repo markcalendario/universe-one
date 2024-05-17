@@ -80,14 +80,17 @@
   cursor: pointer;
   text-decoration: none;
   display: inline;
+  text-align: center;
 
   background-color: var(--primary);
   color: var(--white);
   font-size: 16px;
+
+  border-radius: 5px;
 }
 
 .button:hover {
-  transform: scale(0.95);
+  transform: scale(0.99);
 }
 
 /* Section */
@@ -123,4 +126,35 @@
 .card img {
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+
+/* Inputs */
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input label {
+  font-weight: 700;
+}
+
+.input input {
+  padding: 13px;
+  font-weight: 600;
+  border: 1px var(--primary) solid;
+  border-radius: 2px;
+}
+
+.input input:hover,
+.input input:focus {
+  outline: none;
+}
+
+/* HR */
+
+hr {
+  border: 0;
+  border-bottom: 1px var(--primary) solid;
 }
