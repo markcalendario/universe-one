@@ -85,6 +85,21 @@ class User {
   public function getBiography() {
     return $this->biography;
   }
+
+  public function updateInfo($id, $firstName, $lastName, $birthday, $gender, $contact, $country, $biography) {
+    $db = connect();
+    $sql = "UPDATE users SET first_name = ?, last_name = ?, birthday = ?, gender = ?, contact = ?, country = ?, biography = ? WHERE id = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->bind_param("sssisssi", $firstName, $lastName, $birthday, $gender, $contact, $country, $biography, $id);
+    $stmt->execute();
+    $db->close();
+
+    if ($stmt->affected_rows > 0) {
+      return true;
+    }
+
+    return false;
+  }
 }
 
 ?>

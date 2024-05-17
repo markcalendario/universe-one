@@ -44,12 +44,8 @@ if (!isset($_SESSION["auth"])) {
     <div id="edit">
       <div class="container">
         <div class="wrapper">
-          <div id="edit-input-fields" class="box">
+          <form id="edit-input-fields" class="box" onsubmit="return false;">
             <h1>Loading...</h1>
-            <div class="input">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="text" />
-            </div>
             <div class="input">
               <label for="first-name">First Name</label>
               <input id="first-name" name="first-name" type="text" />
@@ -82,8 +78,9 @@ if (!isset($_SESSION["auth"])) {
               <label for="bio">Short Bio</label>
               <textarea id="bio" name="short-bio"></textarea>
             </div>
-            <button class="button">Loading...</button>
-          </div>
+            <div id="form-response"></div>
+            <button id='update-account' class="button">Loading...</button>
+          </f>
         </div>
       </div>
     </div>

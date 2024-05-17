@@ -47,7 +47,7 @@ if (isset($_SESSION["auth"])) {
     <section id="hero">
       <div class="container">
         <div class="wrapper">
-          <h1>Claim Your Space Legacy</h1>
+          <h1>Explore Beyond Limits</h1>
           <p>
             Join us to register your name for future space exploration and
             become a part of humanity's cosmic legacy.
