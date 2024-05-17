@@ -1,0 +1,184 @@
+/* Hero */
+
+#hero {
+  background-image: url("./images/wallpapers/main-small.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  min-height: 100vh;
+}
+
+#hero .container .wrapper {
+  text-align: center;
+  color: var(--white);
+  padding: 170px 0;
+}
+
+#hero .container .wrapper > *:not(:first-child):not(:last-child) {
+  margin: 20px 0;
+}
+
+#hero .container .wrapper h1 {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 50px;
+}
+
+#hero .container .wrapper .button {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+@media screen and (min-width: 768px) {
+  #hero {
+    background-image: url("./images/wallpapers/main.png");
+  }
+
+  #hero .container .wrapper {
+    padding: 150px 0;
+  }
+}
+
+/* Mission */
+
+#mission .container .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  #mission .container .wrapper {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #mission .container .wrapper .card {
+    width: calc((100% - (10px * 2)) / 3);
+  }
+}
+
+/* Exploration */
+
+#exploration {
+  background-color: var(--primary);
+}
+
+#exploration .section-title {
+  color: var(--white);
+}
+
+#exploration .container .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#exploration .container .wrapper .explore {
+  aspect-ratio: 16/12;
+  position: relative;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center center;
+  transition: 0.1s ease;
+  outline: 1px solid var(--white-7);
+}
+
+#exploration .container .wrapper .explore:hover {
+  transform: scale(1.01);
+}
+
+#exploration .container .wrapper .explore .texts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: var(--white-1);
+  width: 100%;
+}
+
+#exploration .container .wrapper .new-world {
+  background-image: url("./images/exploration/new-world.png");
+}
+
+#exploration .container .wrapper .charting-the-cosmos {
+  background-image: url("./images/exploration/charting-the-cosmos.png");
+}
+
+#exploration .container .wrapper .mysteries {
+  background-image: url("./images/exploration/mysteries.png");
+}
+
+@media screen and (min-width: 768px) {
+  #exploration .container .wrapper .explore {
+    aspect-ratio: 16/5;
+  }
+
+  #exploration .container .wrapper .explore .texts {
+    max-width: 700px;
+    padding: 45px;
+  }
+
+  #exploration .container .wrapper .explore .texts h2 {
+    font-size: 52px;
+  }
+}
+
+/* About */
+
+#about .container .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#about .container .wrapper .left img {
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #about .container .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #about .container .wrapper .left,
+  #about .container .wrapper .right {
+    width: 45%;
+  }
+
+  #about .container .wrapper .left {
+    position: sticky;
+    top: 70px;
+  }
+
+  #about .container .wrapper .right > *:not(:first-child):not(:last-child) {
+    margin: 20px 0;
+  }
+}
+
+/* Tagline */
+
+#tagline {
+  background-image: url("./images/tagline/earth.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+#tagline .container .wrapper {
+  padding: 10px;
+  text-align: center;
+  color: var(--white);
+}
+
+#tagline .container .wrapper img {
+  width: 100px;
+}
+
+#tagline .container .wrapper h1 {
+  font-size: 42px;
+  font-weight: 500;
+}
