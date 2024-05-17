@@ -31,4 +31,17 @@ function isValidGender($str) {
   return $str == "1" || $str == "2" || $str == "3";
 }
 
+function isPasswordCorrect($email, $password) {
+  $db = connect();
+
+  $sql = "SELECT password FROM users WHERE email = ?";
+  $stmt = $db->prepare($sql);
+  $stmt->bind_param("s", $email);
+  $stmt->execute();
+  $stmt->bind_result($hashedPassword);
+  $stmt->fetch();
+
+  return password_verify($password, $hashedPassword);
+}
+
 ?>

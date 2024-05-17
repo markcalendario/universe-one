@@ -2,6 +2,10 @@
 
 session_start();
 
+if (isset($_SESSION["auth"])) {
+  header("Location: ../me");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +53,7 @@ session_start();
                 src="../images/exploration/charting-the-cosmos.png"
                 alt="universe" />
             </div>
-            <form class="right">
+            <form id="login-form" class="right" onsubmit="return false;">
               <?php 
                 if (isset($_SESSION["registered"])) {
                   echo "<p class='green-highlight'>You are now registered.</p>";
@@ -60,13 +64,13 @@ session_start();
               <h1>Universe One Login</h1>
               <div class="input">
                 <label for="email">Email</label>
-                <input id="email" type="text" />
+                <input id="email" name="email" type="text" />
               </div>
               <div class="input">
                 <label for="password">Password</label>
-                <input id="password" type="password" />
+                <input id="password" name="password" type="password" />
               </div>
-              <button class="button">Login</button>
+              <button id="login-btn" class="button">Login</button>
               <hr />
               <a href="../register" class="button">Register</a>
             </form>
@@ -78,3 +82,4 @@ session_start();
 </html>
 
 <script src="../js/navbar.js"></script>
+<script src="./index.js"></script>

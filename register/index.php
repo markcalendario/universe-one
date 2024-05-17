@@ -2,7 +2,7 @@
 
 session_start();
 
-if (isset($_POST["auth"])) {
+if (isset($_SESSION["auth"])) {
   header("Location: ../me");
 }
 
