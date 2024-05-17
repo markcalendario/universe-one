@@ -133,10 +133,12 @@
 .input {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
 
 .input label {
-  font-weight: 700;
+  font-weight: 400;
+  font-size: small;
 }
 
 .input input,
