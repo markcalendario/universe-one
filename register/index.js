@@ -1,15 +1,5 @@
-const countriesSelect = document.getElementById("country-of-residency");
 const registerBtn = document.getElementById("register-btn");
 const registrationForm = document.getElementById("register-form");
-
-function loadCountries() {
-  for (const country of countries) {
-    const option = document.createElement("option");
-    option.innerText = country;
-    option.value = country;
-    countriesSelect.appendChild(option);
-  }
-}
 
 async function handleRegister() {
   const response = await fetch("../php/controllers/register.php", {
@@ -26,5 +16,4 @@ async function handleRegister() {
   }
 }
 
-loadCountries();
 registerBtn.addEventListener("click", handleRegister);

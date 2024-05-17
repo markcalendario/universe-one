@@ -98,8 +98,8 @@ if (isset($_SESSION["registered"])) {
                 <input id="contact" name="contact" type="text" />
               </div>
               <div class="input">
-                <label for="country-of-residency">Country of Residency</label>
-                <select id="country-of-residency" name="country" type="text">
+                <label for="country-select">Country of Residency</label>
+                <select id="country-select" name="country" type="text">
                   <option value="">Select a country.</option>
                 </select>
               </div>
@@ -120,5 +120,5 @@ if (isset($_SESSION["registered"])) {
 </html>
 
 <script src="../js/navbar.js"></script>
-<script src="../js/countries.js"></script>
+<script src="../js/countries-options.js"></script>
 <script src="./index.js"></script>
