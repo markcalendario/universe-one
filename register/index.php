@@ -85,12 +85,9 @@ if (isset($_SESSION["registered"])) {
                 <input id="birthday" name="birthday" type="date" />
               </div>
               <div class="input">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender" type="text">
-                  <option value="">Select your gender.</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Others</option>
+                <label for="gender-select">Gender</label>
+                <select id="gender-select" name="gender" type="text">
+                  <option value="">Select gender.</option>
                 </select>
               </div>
               <div class="input">
@@ -121,4 +118,5 @@ if (isset($_SESSION["registered"])) {
 
 <script src="../js/navbar.js"></script>
 <script src="../js/countries-options.js"></script>
+<script src="../js/gender-options.js"></script>
 <script src="./index.js"></script>
