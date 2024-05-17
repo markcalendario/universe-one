@@ -133,22 +133,31 @@
 .input {
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .input label {
   font-weight: 700;
 }
 
-.input input {
-  padding: 13px;
+.input input,
+.input select,
+.input textarea {
+  padding: 10px;
   font-weight: 600;
   border: 1px var(--primary) solid;
   border-radius: 2px;
 }
 
+.input textarea {
+  resize: none;
+}
+
 .input input:hover,
-.input input:focus {
+.input input:focus,
+.input select:hover,
+.input select:focus,
+.input textarea:hover,
+.input textarea:focus {
   outline: none;
 }
 
