@@ -1,10 +1,3 @@
-const signOutBtn = document.getElementById("sign-out");
-
-async function handleSigOut() {
-  await fetch("../php/controllers/sign-out.php");
-  window.location.reload();
-}
-
 async function getUserData() {
   const userDataContainer = document.getElementById("user-data");
 
@@ -13,5 +6,4 @@ async function getUserData() {
   userDataContainer.innerHTML = result;
 }
 
-signOutBtn.addEventListener("click", handleSigOut);
 getUserData();
