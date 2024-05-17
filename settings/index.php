@@ -34,8 +34,8 @@
     <div id="edit">
       <div class="container">
         <div class="wrapper">
-          <div class="box">
-            <h1>Edit Mark Kenneth</h1>
+          <div id="edit-input-fields" class="box">
+            <h1>Loading...</h1>
             <div class="input">
               <label for="email">Email</label>
               <input id="email" name="email" type="text" />
@@ -56,9 +56,6 @@
               <label for="gender">Gender</label>
               <select id="gender" name="gender" type="text">
                 <option value="">Select your gender.</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Others</option>
               </select>
             </div>
             <div class="input">
@@ -75,7 +72,7 @@
               <label for="bio">Short Bio</label>
               <textarea id="bio" name="short-bio"></textarea>
             </div>
-            <button class="button">Update My Account</button>
+            <button class="button">Loading...</button>
           </div>
         </div>
       </div>

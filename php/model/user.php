@@ -62,8 +62,16 @@ class User {
     return $date->format('F j, Y');
   }
 
+  public function getHTMLFormatBirthday() {
+    return $this->birthday;
+  }
+
   public function getGender() {
     return decodeGender($this->gender);
+  }
+
+  public function getEncodedGender() {
+    return $this->gender;
   }
 
   public function getContact() {
