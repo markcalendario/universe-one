@@ -26,6 +26,7 @@ function getUserIdFromEmail($email) {
   $stmt->execute();
   $stmt->bind_result($id);
   $stmt->fetch();
+  $db->close();
 
   return $id;
 }

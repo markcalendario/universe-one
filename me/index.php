@@ -47,35 +47,31 @@ if (!isset($_SESSION["auth"])) {
             <div class="left">
               <img src="../images/me/astronaut.jpg" alt="astronaut" />
             </div>
-            <div class="right">
-              <h1>Mark Kenneth Calendario</h1>
+            <div id="user-data" class="right">
+              <h1>Loading...</h1>
               <div class="field">
                 <p class="field-name">Email</p>
-                <p>markcalendario@gmail.com</p>
+                <p class="data">Loading...</p>
               </div>
               <div class="field">
                 <p class="field-name">Contact</p>
-                <p>+639283580984</p>
+                <p class="data">Loading...</p>
               </div>
               <div class="field">
                 <p class="field-name">Birthday</p>
-                <p>October 19, 2002</p>
+                <p class="data">Loading...</p>
               </div>
               <div class="field">
                 <p class="field-name">Gender</p>
-                <p>Male</p>
+                <p class="data">Loading...</p>
               </div>
               <div class="field">
                 <p class="field-name">Country</p>
-                <p>Philippines</p>
+                <p class="data">Loading...</p>
               </div>
               <div class="field">
                 <p class="field-name">Biography</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nostrum debitis nisi ratione enim. Earum similique quos optio
-                  reprehenderit quidem nobis.
-                </p>
+                <p class="data">Loading...</p>
               </div>
             </div>
           </div>

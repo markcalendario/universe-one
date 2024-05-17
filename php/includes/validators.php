@@ -40,6 +40,7 @@ function isPasswordCorrect($email, $password) {
   $stmt->execute();
   $stmt->bind_result($hashedPassword);
   $stmt->fetch();
+  $db->close();
 
   return password_verify($password, $hashedPassword);
 }
