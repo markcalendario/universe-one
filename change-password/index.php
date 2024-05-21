@@ -21,18 +21,18 @@ if (!isset($_SESSION["auth"])) {
     <link rel="stylesheet" href="./index.css" />
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <title>Universe One | Home</title>
+    <title>Universe One | Password</title>
   </head>
   <body>
     <nav id="nav">
       <div class="container">
         <div class="wrapper">
           <div class="logo">
-            <h1>Universe One | Home</h1>
+            <h1>Universe One | Password</h1>
           </div>
           <div id="nav-links" class="links">
+            <a href="../me">Home</a>
             <a href="../settings">Settings</a>
-            <a href="../change-password">Change Password</a>
             <a id="sign-out" href="#signout">Log Out</a>
           </div>
           <div class="burger">
@@ -42,41 +42,35 @@ if (!isset($_SESSION["auth"])) {
       </div>
     </nav>
 
-    <div id="account">
+    <div id="edit">
       <div class="container">
         <div class="wrapper">
-          <div class="id-card">
-            <div class="left">
-              <img src="../images/me/astronaut.jpg" alt="astronaut" />
+          <form id="edit-password-form" class="box" onsubmit="return false;">
+            <h1>Password Settings</h1>
+            <div class="input">
+              <label for="current-password">Current Password</label>
+              <input 
+                id="current-password" 
+                name="current-password" 
+                type="password">
             </div>
-            <div id="user-data" class="right">
-              <h1>Loading...</h1>
-              <div class="field">
-                <p class="field-name">Email</p>
-                <p class="data">Loading...</p>
-              </div>
-              <div class="field">
-                <p class="field-name">Contact</p>
-                <p class="data">Loading...</p>
-              </div>
-              <div class="field">
-                <p class="field-name">Birthday</p>
-                <p class="data">Loading...</p>
-              </div>
-              <div class="field">
-                <p class="field-name">Gender</p>
-                <p class="data">Loading...</p>
-              </div>
-              <div class="field">
-                <p class="field-name">Country</p>
-                <p class="data">Loading...</p>
-              </div>
-              <div class="field">
-                <p class="field-name">Biography</p>
-                <p class="data">Loading...</p>
-              </div>
+            <div class="input">
+              <label for="new-password">New Password</label>
+              <input 
+                id="new-password" 
+                name="new-password" 
+                type="password">
             </div>
-          </div>
+            <div class="input">
+              <label for="confirm-new-password">Confirm New Password</label>
+              <input 
+                id="confirm-new-password" 
+                name="confirm-new-password" 
+                type="password">
+            </div>
+            <div id="form-response"></div>
+            <button id='update-password' class="button">Update Password</button>
+          </f>
         </div>
       </div>
     </div>

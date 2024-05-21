@@ -32,6 +32,7 @@ if (!isset($_SESSION["auth"])) {
           </div>
           <div id="nav-links" class="links">
             <a href="../me">Home</a>
+            <a href="../change-password">Change Password</a>
             <a id="sign-out" href="#signout">Log Out</a>
           </div>
           <div class="burger">

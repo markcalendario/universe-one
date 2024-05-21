@@ -86,11 +86,11 @@ class User {
     return $this->biography;
   }
 
-  public function updateInfo($id, $firstName, $lastName, $birthday, $gender, $contact, $country, $biography) {
+  public function updateInfo($firstName, $lastName, $birthday, $gender, $contact, $country, $biography) {
     $db = connect();
     $sql = "UPDATE users SET first_name = ?, last_name = ?, birthday = ?, gender = ?, contact = ?, country = ?, biography = ? WHERE id = ?";
     $stmt = $db->prepare($sql);
-    $stmt->bind_param("sssisssi", $firstName, $lastName, $birthday, $gender, $contact, $country, $biography, $id);
+    $stmt->bind_param("sssisssi", $firstName, $lastName, $birthday, $gender, $contact, $country, $biography, $this->id);
     $stmt->execute();
     $db->close();
 
@@ -99,6 +99,19 @@ class User {
     }
 
     return false;
+  }
+
+  public function updatePassword($newPasswordPlainText) {
+    $db = connect();
+    $hashedPassword = hashPassword($newPasswordPlainText);
+    $sql = "UPDATE users SET password = ? WHERE id = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->bind_param("si", $hashedPassword, $this->id);
+    $stmt->execute();
+    $stmt->fetch();
+    $db->close();
+
+    return $stmt->affected_rows > 0;
   }
 }
 

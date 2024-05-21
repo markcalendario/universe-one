@@ -120,7 +120,7 @@ function updateAccountInformation() {
   }
 
   $user = new User($_SESSION['auth']);
-  $isUpdated = $user->updateInfo($_SESSION['auth'], $firstName, $lastName, $birthday, $gender, $contact, $country, $bio);
+  $isUpdated = $user->updateInfo($firstName, $lastName, $birthday, $gender, $contact, $country, $bio);
 
   if ($isUpdated) {
     echo '<p class="green-highlight">Success! You have successfully edited your info.</p>';
