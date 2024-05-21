@@ -52,7 +52,7 @@ if (isset($_SESSION["auth"])) {
             Join us to register your name for future space exploration and
             become a part of humanity's cosmic legacy.
           </p>
-          <a class="button">Join Now!</a>
+          <a href="register" class="button">Join Now!</a>
         </div>
       </div>
     </section>
@@ -190,8 +190,8 @@ if (isset($_SESSION["auth"])) {
               Together, let us reach for the stars and redefine what is
               possible, all from the heart of the Philippines.
             </p>
-            <button class="button">Login</button>
-            <button class="button">Join Us now</button>
+            <a href="login" class="button">Login</a>
+            <a href="register" class="button">Join Us now</a>
           </div>
         </div>
       </div>
