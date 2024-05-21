@@ -104,7 +104,6 @@ $sql = "INSERT INTO users (first_name, last_name, email, password, birthday, gen
 $stmt = $db->prepare($sql);
 $stmt->bind_param("sssssssss", $firstName, $lastName, $email, $hashedPassword, $birthday, $gender, $contact, $country, $bio);
 $stmt->execute();
-$stmt->close();
 $db->close();
 
 if ($stmt->affected_rows) {
