@@ -35,6 +35,11 @@ if ($newPassword != $confirmNewPassword) {
   return;
 }
 
+if (!isStrongPassword($newPassword)) {
+  echo '<p class="red-highlight">Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one digit, and one special character.</p>';
+  return;
+}
+
 if (isPasswordCorrect($user->getEmail(), $newPassword)) {
   echo '<p class="red-highlight">Old and new passwords cannot not be the same.</p>';
   return;

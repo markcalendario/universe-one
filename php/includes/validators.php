@@ -45,4 +45,33 @@ function isPasswordCorrect($email, $password) {
   return password_verify($password, $hashedPassword);
 }
 
+function isStrongPassword($password) {
+  // Password must be at least 8 characters long
+  if (strlen($password) < 8) {
+      return false;
+  }
+  
+  // Password must contain at least one lowercase letter
+  if (!preg_match('/[a-z]/', $password)) {
+      return false;
+  }
+  
+  // Password must contain at least one uppercase letter
+  if (!preg_match('/[A-Z]/', $password)) {
+      return false;
+  }
+  
+  // Password must contain at least one digit
+  if (!preg_match('/\d/', $password)) {
+      return false;
+  }
+  
+  // Password must contain at least one special character
+  if (!preg_match('/[\W_]/', $password)) {
+      return false;
+  }
+  
+  return true;
+}
+
 ?>

@@ -82,6 +82,11 @@ if ($password != $confirmPassword) {
   return;
 }
 
+if (!isStrongPassword($password)) {
+  echo '<p class="red-highlight">Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one digit, and one special character.</p>';
+  return;
+}
+
 if (!isHTMLDateValid($birthday)) {
   echo '<p class="red-highlight">Invalid birthdate format.</p>';
   return;
